@@ -4,20 +4,30 @@ import Header from "./components/header.vue";
 import Hero from "./components/Hero.vue";
 import Shoot from "./components/shoot.vue";
 import Performance from "./components/performance.vue";
+import Grid from "./components/applegrid.vue"
+import Side from "./components/side.vue"
+import Motion from "./components/motion.vue"
+import Last from "./components/lastsect.vue"
 import { split } from "./animations/text";
+import { skew } from "./animations/skew";
 
 onMounted(() => {
-  split();
+     split();
+     skew();
 });
 </script>
 
 <template>
-  <div class="s_wrap">
-    <Header />
-    <Hero />
-    <Performance />
-    <Shoot />
-  </div>
+     <div class="s_wrap">
+          <Header />
+          <Hero />
+          <Performance />
+          <Shoot />
+          <Grid/>
+          <Side/>
+          <Last/>
+          <Motion/>
+     </div>
 </template>
 
 <style scoped></style>
