@@ -93,40 +93,40 @@
                     </div>
                </div>
                <div class="s_shoot_wrap_base">
-                   <img src="https://image-us.samsung.com/us/smartphones/galaxy-s23/images/galaxy-s23-highlights-camera-kv.jpg" alt="">
-                   <div class="s_shoot_wrap_base_specs">
-                      <div>
-                        <span></span>
-                        <div class="txt">
-                           <h3 data-animation="h">10MP</h3>
-                           <p data-animation="p">3x optical zoom</p>
-                           <p data-animation="p">Telephoto Camera</p>
-                        </div>
-                      </div>
-                      <div>
-                        <span></span>
-                        <div class="txt">
-                           <h3 data-animation="h">50MP</h3>
-                           <p data-animation="p">Wide-Angle</p>
-                           <p data-animation="p">Camera</p>
-                        </div>
-                      </div>
-                      <div>
-                        <span></span>
-                        <div class="txt">
-                           <h3 data-animation="h">12MP</h3>
-                           <p data-animation="p">Ultrawide Camera</p>
-                        </div>
-                      </div>
-                      <div>
-                        <span></span>
-                        <div class="txt">
-                           <h3 data-animation="h">12MP</h3>
-                           <p data-animation="p">Selfie Camera</p>
-                        </div>
-                      </div>
-                   </div>
-               </div> 
+                    <img src="https://image-us.samsung.com/us/smartphones/galaxy-s23/images/galaxy-s23-highlights-camera-kv.jpg" alt="" />
+                    <div class="s_shoot_wrap_base_specs">
+                         <div>
+                              <span></span>
+                              <div class="txt">
+                                   <h3 data-animation="h">10MP</h3>
+                                   <p data-animation="p">3x optical zoom</p>
+                                   <p data-animation="p">Telephoto Camera</p>
+                              </div>
+                         </div>
+                         <div>
+                              <span></span>
+                              <div class="txt">
+                                   <h3 data-animation="h">50MP</h3>
+                                   <p data-animation="p">Wide-Angle</p>
+                                   <p data-animation="p">Camera</p>
+                              </div>
+                         </div>
+                         <div>
+                              <span></span>
+                              <div class="txt">
+                                   <h3 data-animation="h">12MP</h3>
+                                   <p data-animation="p">Ultrawide Camera</p>
+                              </div>
+                         </div>
+                         <div>
+                              <span></span>
+                              <div class="txt">
+                                   <h3 data-animation="h">12MP</h3>
+                                   <p data-animation="p">Selfie Camera</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
           </div>
      </section>
 </template>
@@ -136,14 +136,13 @@ import { onMounted } from "vue";
 import { IO } from "../animations/observe";
 
 onMounted(() => {
-   const spans = document.querySelectorAll(".s_shoot_wrap_base_specs span");
-   spans.forEach((span) => {
-      IO(span).then(() => {
-         span.classList.add('anim');
-      })
-   })
-
-})
+     const spans = document.querySelectorAll(".s_shoot_wrap_base_specs span");
+     spans.forEach((span) => {
+          IO(span).then(() => {
+               span.classList.add("anim");
+          });
+     });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -260,60 +259,60 @@ onMounted(() => {
                     }
                }
           }
-          &_base{
-            width: 100%;
-            bottom:0rem ;
-            min-height: 80rem;
-            position: relative;
-            overflow: hidden;
-            img{
-              width: 110%;
-              z-index: 1;
-              bottom: 0;
-              position: absolute;
-            }
-            &_specs{
-               >div{
-                  z-index: 3;
-                  position: absolute;
-                  @include flex(center, flex-start, 1.5rem);
-                  span{
-                     display: block;
-                     background: #777777;
-                     width: 0.1rem;
-                     height: 0;
-                     transition: height 2s ease-out;
-                  }
-                  &:nth-child(1){
-                     left: 28rem;
-                     top: 30rem;
-                     span.anim{
-                        height: 24rem;
-                     }
-                  }
-                  &:nth-child(2){
-                     left: 40rem;
-                     top: 22rem;
-                     span.anim{
-                        height: 25rem;
-                     }
-                  }
-                  &:nth-child(3){
-                     left: 51rem;
-                     top: 15rem;
-                     span.anim{
-                        height: 27rem;
-                     }
-                  }
-                  &:nth-child(4){
-                     right: 12rem;
-                     top: 26rem;
-                     span.anim{
-                        height: 25rem;
-                     }
-                  }
+          &_base {
+               width: 100%;
+               bottom: 0rem;
+               min-height: 80rem;
+               position: relative;
+               overflow: hidden;
+               img {
+                    width: 110%;
+                    z-index: 1;
+                    bottom: 0;
+                    position: absolute;
                }
-            }
+               &_specs {
+                    > div {
+                         z-index: 3;
+                         position: absolute;
+                         @include flex(center, flex-start, 1.5rem);
+                         span {
+                              display: block;
+                              background: #777777;
+                              width: 0.1rem;
+                              height: 0;
+                              transition: height 2s ease-out;
+                         }
+                         &:nth-child(1) {
+                              left: 28rem;
+                              top: 30rem;
+                              span.anim {
+                                   height: 24rem;
+                              }
+                         }
+                         &:nth-child(2) {
+                              left: 40rem;
+                              top: 22rem;
+                              span.anim {
+                                   height: 25rem;
+                              }
+                         }
+                         &:nth-child(3) {
+                              left: 51rem;
+                              top: 15rem;
+                              span.anim {
+                                   height: 27rem;
+                              }
+                         }
+                         &:nth-child(4) {
+                              right: 12rem;
+                              top: 26rem;
+                              span.anim {
+                                   height: 25rem;
+                              }
+                         }
+                    }
+               }
           }
      }
 }
