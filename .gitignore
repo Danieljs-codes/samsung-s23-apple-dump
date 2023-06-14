@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.gitignore
+/src/assets/hero
 
 # Editor directories and files
 .vscode/*

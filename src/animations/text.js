@@ -5,8 +5,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const split = () => {
-  const p = document.querySelectorAll("[data-animation='paragraph']");
-  const H = document.querySelectorAll("[data-animation='header']");
+  const p = document.querySelectorAll("[data-animation='p']");
+  const H = document.querySelectorAll("[data-animation='h']");
   const f = document.querySelectorAll("[data-animation='fadeInOut']");
   p.forEach((item) => {
     const line = Splitting({

@@ -8,14 +8,17 @@ html {
   font-size: calc(100vw / 1440 * 16);
 }
 body {
+  font-family: Samsung;
+  overflow-x: hidden;
 }
 h1 {
-  font-size: toRem(85);
-}
-p {
-  line-height: 2rem;
+  font-size: toRem(90);
+  line-height: 5.5rem;
+  font-family: Samsungsharp;
 }
 section {
+  padding: 7rem 0;
+  min-height: 100vh;
   width: 100%;
 }
 button {
@@ -28,6 +31,6 @@ img {
   -webkit-user-drag: none;
   user-select: none;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+// ::-webkit-scrollbar {
+//   display: none;
+// }

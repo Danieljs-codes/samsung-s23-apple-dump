@@ -5,11 +5,12 @@ span.word_wrap {
   overflow: hidden;
   display: inline-block;
 }
-[data-animation="header"] span.word {
+[data-animation="h"] span.word {
   overflow-y: hidden;
   position: relative;
 }
 .child_wrap {
+  width: 80%;
   margin: 0 auto;
 }
 .abs {
