@@ -10,15 +10,25 @@ import Motion from "./components/motion.vue";
 import Last from "./components/lastsect.vue";
 import { split } from "./animations/text";
 import { skew } from "./animations/skew";
+import LoconativeScroll from "loconative-scroll";
 
 onMounted(() => {
      split();
      skew();
+
+     const scroll = new LoconativeScroll({
+          smooth: true,
+          el: document.querySelector("[data-scroll-container]"),
+     });
+
+     setTimeout(() => {
+          scroll.update();
+     }, 500);
 });
 </script>
 
 <template>
-     <div class="s_wrap">
+     <div data-scroll-container class="s_wrap">
           <Header />
           <Hero />
           <Performance />

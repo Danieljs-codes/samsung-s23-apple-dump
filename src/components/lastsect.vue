@@ -8,10 +8,15 @@
                     </div>
                     <div class="s_last_wrap_first_img">
                          <img
+                              data-scroll
+                              data-scroll-speed="2"
                               src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/images/galaxy-s23-ultra-highlights-spec-camera.jpg"
                               alt=""
                          />
                          <img
+                              data-scroll
+                              data-scroll-speed="-2"
+                              data-scroll-delay="1"
                               src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/images/galaxy-s23-ultra-highlights-spen.jpg"
                               alt=""
                          />
@@ -36,12 +41,23 @@
                          <h2 data-animation="h">The connected power of Samsung Galaxy</h2>
                     </div>
                     <div class="img_space">
-                         <img src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/images/localization/d3eco.png" alt="" />
                          <img
+                              data-scroll
+                              data-scroll-speed="-1"
+                              src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/images/localization/d3eco.png"
+                              alt=""
+                         />
+                         <img
+                              data-scroll
+                              data-scroll-speed="1"
+                              data-scroll-delay="1"
+                              data-scroll-direction="horizontal"
                               src="https://image-us.samsung.com/us/smartphones/galaxy-z-fold4/v1/images/galaxy-z-fold4_ecosystem_watch.png"
                               alt=""
                          />
                          <img
+                              data-scroll
+                              data-scroll-speed="2"
                               src="https://image-us.samsung.com/us/smartphones/galaxy-z-fold4/v1/images/galaxy-z-fold4_ecosystem_buds.png"
                               alt=""
                          />
