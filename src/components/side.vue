@@ -17,7 +17,7 @@ export default {};
 .s_side {
      width: 100%;
      .wrap {
-          height: 120vh;
+          height: 110vh;
           background-size: cover;
           background-repeat: no-repeat;
           width: 100%;
@@ -26,6 +26,9 @@ export default {};
           color: white;
           h1 {
                max-width: 60%;
+          }
+          @include media("<=tablet"){
+               height: 100vh;
           }
      }
      &_1 {

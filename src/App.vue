@@ -30,13 +30,13 @@ onMounted(() => {
 <template>
      <div data-scroll-container class="s_wrap">
           <Header />
-          <Hero />
+          <!-- <Hero /> -->
           <Performance />
           <Shoot />
           <Grid />
           <Side />
           <Last />
-          <Motion />
+          <!-- <Motion /> -->
      </div>
 </template>
 

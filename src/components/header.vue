@@ -1,6 +1,6 @@
 <template>
      <header class="child_wrap">
-          <nav>
+          <nav class="mg_au">
                <img src="https://image-us.samsung.com/SamsungUS/logo/gnb-desktop-120x32.png" alt="" />
                <li>Shop</li>
                <li>Mobile</li>
@@ -51,13 +51,15 @@ header {
      background: white;
      position: relative;
      nav {
-          margin: 0 auto;
           @include flex(space-between, center, none);
           li {
                list-style-type: none;
                color: rgb(0, 0, 0.8);
                font-size: 0.8rem;
                opacity: 0.8;
+               @include media("<=tablet"){
+                    display: none;
+               }
           }
           img {
                width: 7.5rem;
@@ -70,7 +72,7 @@ header {
      transition: 1s ease-out;
      position: sticky;
      border-bottom: 1px solid $fadegray;
-     background: rgba(255, 255, 255, 0.312);
+     background: rgb(255, 255, 255);
      left: 0;
      right: 0;
      top: 0;
@@ -92,6 +94,9 @@ header {
                     li {
                          list-style: none;
                          font-size: 12px;
+                         @include media("<=tablet"){
+                    display: none;
+               }
                     }
                     button {
                          background: $blue;

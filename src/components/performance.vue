@@ -34,6 +34,9 @@
                h1 {
                     max-width: 80%;
                     margin: 0 auto;
+                    @include media("<=phone-tab"){
+                         max-width: 100%
+                    }
                }
           }
           &_vid {
@@ -41,11 +44,17 @@
                video {
                     width: 90%;
                     margin: 0 auto;
+                    @include media("<=phone-tab"){
+                         width: 100%
+                    }
                }
                p {
                     font-size: 1.3em;
                     max-width: 50%;
                     margin: 0 auto;
+                    @include media("<=phone-tab"){
+                         max-width: 100%;
+                    }
                }
           }
      }

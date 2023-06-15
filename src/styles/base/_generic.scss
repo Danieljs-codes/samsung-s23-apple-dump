@@ -12,6 +12,25 @@ span.word_wrap {
 .child_wrap {
      width: 80%;
      margin: 0 auto;
+     @include media("<=tablet") {
+          width: 90%;
+     }
+}
+.rm-tab{
+     @include media("<=tablet") {
+          display: none;
+     }
+}
+.rm-mobile{
+     @include media("<=phone-tab") {
+          display: none;
+     }
+}
+.full-width-tab{
+     @include media("<=phone-tab") {
+          width: 100%;
+          max-width: 100%;
+     }
 }
 .abs {
      position: absolute;

@@ -16,7 +16,7 @@ export const skew = () => {
                          img,
                          {
                               ease: "Power1.easeInOut",
-                              skewY: `${getVelocity() / 500}deg`,
+                              skewY: `${getVelocity() / 300}deg`,
                          },
                          {
                               skewY: 0,
