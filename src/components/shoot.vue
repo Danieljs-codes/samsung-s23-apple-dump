@@ -152,7 +152,7 @@ onMounted(() => {
      color: white;
      &_wrap {
           @include flex_col(1rem);
-          @include media("<=tablet"){
+          @include media("<=tablet") {
                @include flex_col(4rem);
           }
           position: relative;
@@ -161,18 +161,18 @@ onMounted(() => {
                p {
                     text-transform: uppercase;
                     font-size: 1.2em;
-                    @include media("<=phone-tab"){
+                    @include media("<=phone-tab") {
                          font-size: 1em;
                     }
                }
                h1 {
                     font-size: 10rem;
                     line-height: 9.5rem;
-                    @include media("<=tablet"){
-                         font-size:6rem;
-                         line-height:5.6rem;
+                    @include media("<=tablet") {
+                         font-size: 6rem;
+                         line-height: 5.6rem;
                     }
-                    @include media("<=phone-tab"){
+                    @include media("<=phone-tab") {
                          font-size: 4rem;
                          line-height: 4rem;
                     }
@@ -182,17 +182,17 @@ onMounted(() => {
                @include flex_col(4rem);
                &_1 {
                     @include flex(space-between, center, 5rem);
-                    @include media("<=tablet"){
-                        @include flex_col(4rem);
+                    @include media("<=tablet") {
+                         @include flex_col(4rem);
                     }
                     .left {
                          width: 45%;
                          @include flex_col(4rem);
                          justify-content: space-between;
-                         @include media("<=tablet"){
+                         @include media("<=tablet") {
                               width: 100%;
                               // text-align: center;
-                           }
+                         }
                          img {
                               width: 100%;
                          }
@@ -202,9 +202,9 @@ onMounted(() => {
                     }
                     .right {
                          width: 55%;
-                         @include media("<=tablet"){
+                         @include media("<=tablet") {
                               width: 80%;
-                           }
+                         }
                          img {
                               width: 100%;
                          }
@@ -212,27 +212,27 @@ onMounted(() => {
                }
                &_2 {
                     @include flex(center, center, 4rem);
-                    @include media("<=tablet"){
-                            gap: 2rem;
-                            flex-direction: column-reverse;
-                           }
+                    @include media("<=tablet") {
+                         gap: 2rem;
+                         flex-direction: column-reverse;
+                    }
                     &-txt {
                          width: 40%;
-                        
+
                          @include flex_col(1rem);
-                         @include media("<=tablet"){
-                         width: 100%;
-                         @include flex_col(1.5rem);
-                           }
+                         @include media("<=tablet") {
+                              width: 100%;
+                              @include flex_col(1.5rem);
+                         }
                          p {
                               font-size: 1.1em;
                          }
                     }
                     &-img {
                          width: 40%;
-                         @include media("<=tablet"){
-                         width: 100%;
-                           }
+                         @include media("<=tablet") {
+                              width: 100%;
+                         }
                          img {
                               width: 100%;
                          }
@@ -246,9 +246,9 @@ onMounted(() => {
                          width: 70%;
                          margin: 0 auto;
                          position: relative;
-                         @include media("<=tablet"){
-                         width: 100%;
-                           }
+                         @include media("<=tablet") {
+                              width: 100%;
+                         }
                          video {
                               width: 100%;
                          }
@@ -258,50 +258,50 @@ onMounted(() => {
                          p {
                               width: 50%;
                               margin: 0 auto;
-                              @include media("<=tablet"){
-                         width: 100%;
-                           }
+                              @include media("<=tablet") {
+                                   width: 100%;
+                              }
                          }
                     }
                }
                &_4 {
                     @include flex(center, flex-start, 3rem);
                     margin-top: 3rem;
-                    @include media("<=tablet"){
-                          @include flex_col(4rem);
-                           }
+                    @include media("<=tablet") {
+                         @include flex_col(4rem);
+                    }
                     .left {
                          width: 40%;
                          position: relative;
-                         @include media("<=tablet"){
-                         width: 100%;
-                           }
+                         @include media("<=tablet") {
+                              width: 100%;
+                         }
                          img {
                               &:nth-child(1) {
                                    width: 100%;
                                    height: 41rem;
-                                   @include media("<=tablet"){
-                                   height:35rem;
-                                    }
+                                   @include media("<=tablet") {
+                                        height: 35rem;
+                                   }
                               }
                               &:nth-child(2) {
                                    width: 18rem;
                                    position: absolute;
                                    bottom: 5rem;
                                    left: -30%;
-                                   @include media("<=tablet"){
+                                   @include media("<=tablet") {
                                         left: -10%;
                                         bottom: 2rem;
-                           }
+                                   }
                               }
                          }
                     }
                     .right {
                          max-width: 40%;
-                         @include media("<=tablet"){
-                                        max-width:100%;
-                                        gap:7rem;
-                           }
+                         @include media("<=tablet") {
+                              max-width: 100%;
+                              gap: 7rem;
+                         }
                          height: 100%;
                          display: flex;
                          flex-direction: column;
@@ -314,10 +314,10 @@ onMounted(() => {
                          .txt {
                               @include flex_col(0.4rem);
                               width: 90%;
-                              @include media("<=tablet"){
+                              @include media("<=tablet") {
                                    @include flex_col(1rem);
-                                   width:100%;
-                           }
+                                   width: 100%;
+                              }
                          }
                     }
                }
@@ -328,10 +328,10 @@ onMounted(() => {
                min-height: 80rem;
                position: relative;
                overflow: hidden;
-               @include media("<=tablet"){
+               @include media("<=tablet") {
                     min-height: 64rem;
                }
-               @include media("<=phone-tab"){
+               @include media("<=phone-tab") {
                     min-height: 50rem;
                }
                img {
@@ -339,36 +339,36 @@ onMounted(() => {
                     z-index: 1;
                     bottom: 0;
                     position: absolute;
-                    @include media("<=tablet"){
-                   width: 160%;
-                   transform: translateX(-15rem);
-               }
-               @include media("<=phone-tab"){
-                    width: 180%;
-                   transform: translateX(-10rem);
-               }
+                    @include media("<=tablet") {
+                         width: 160%;
+                         transform: translateX(-15rem);
+                    }
+                    @include media("<=phone-tab") {
+                         width: 180%;
+                         transform: translateX(-10rem);
+                    }
                }
                &_specs {
                     > div {
                          z-index: 3;
                          position: absolute;
                          @include flex(center, flex-start, 1.5rem);
-                         @include media("<=phone-tab"){
-                                   flex-direction: column-reverse;
-                                   align-items: center;
-                                   text-align: center;
-                              }
-                         @include media("<=tablet"){
-                                   gap: 1rem;
-                              }
-                         
-                         h3{
-                              @include media("<=tablet"){
+                         @include media("<=phone-tab") {
+                              flex-direction: column-reverse;
+                              align-items: center;
+                              text-align: center;
+                         }
+                         @include media("<=tablet") {
+                              gap: 1rem;
+                         }
+
+                         h3 {
+                              @include media("<=tablet") {
                                    font-size: 2rem;
                               }
                          }
-                         p{
-                              font-size: .8em;
+                         p {
+                              font-size: 0.8em;
                          }
                          span {
                               display: block;
@@ -380,29 +380,29 @@ onMounted(() => {
                          &:nth-child(1) {
                               left: 31%;
                               top: 37%;
-                              @include media("<=tablet"){
+                              @include media("<=tablet") {
                                    left: 13%;
                                    top: 30%;
                               }
-                              @include media("<=phone-tab"){
+                              @include media("<=phone-tab") {
                                    left: 2%;
                                    top: 17%;
                               }
                               span.anim {
                                    height: 24rem;
-                                   @include media("<=phone-tab"){
-                                   height: 20rem;
-                              }
+                                   @include media("<=phone-tab") {
+                                        height: 20rem;
+                                   }
                               }
                          }
                          &:nth-child(2) {
                               left: 40rem;
                               top: 22rem;
-                              @include media("<=tablet"){
+                              @include media("<=tablet") {
                                    left: 15rem;
-                                   top:14rem;
+                                   top: 14rem;
                               }
-                              @include media("<=phone-tab"){
+                              @include media("<=phone-tab") {
                                    left: 6.7rem;
                                    top: 1rem;
                               }
@@ -413,37 +413,37 @@ onMounted(() => {
                          &:nth-child(3) {
                               left: 51rem;
                               top: 15rem;
-                              @include media("<=tablet"){
+                              @include media("<=tablet") {
                                    left: 24rem;
-                                   top:8rem;
+                                   top: 8rem;
                               }
-                              @include media("<=phone-tab"){
-                                   left:12rem;
+                              @include media("<=phone-tab") {
+                                   left: 12rem;
                                    top: 18%;
                               }
                               span.anim {
                                    height: 27rem;
-                                   @include media("<=phone-tab"){
-                                   height: 15rem;
-                              }
+                                   @include media("<=phone-tab") {
+                                        height: 15rem;
+                                   }
                               }
                          }
                          &:nth-child(4) {
                               right: 12rem;
                               top: 26rem;
-                              @include media("<=tablet"){
+                              @include media("<=tablet") {
                                    right: 3rem;
-                                   top:17rem;
+                                   top: 17rem;
                               }
-                              @include media("<=phone-tab"){
-                                   right:.5rem;
+                              @include media("<=phone-tab") {
+                                   right: 0.5rem;
                                    top: 30%;
                               }
                               span.anim {
                                    height: 25rem;
-                                   @include media("<=phone-tab"){
-                                   height: 15rem;
-                              }
+                                   @include media("<=phone-tab") {
+                                        height: 15rem;
+                                   }
                               }
                          }
                     }

@@ -57,7 +57,7 @@ header {
                color: rgb(0, 0, 0.8);
                font-size: 0.8rem;
                opacity: 0.8;
-               @include media("<=tablet"){
+               @include media("<=tablet") {
                     display: none;
                }
           }
@@ -94,9 +94,9 @@ header {
                     li {
                          list-style: none;
                          font-size: 12px;
-                         @include media("<=tablet"){
-                    display: none;
-               }
+                         @include media("<=tablet") {
+                              display: none;
+                         }
                     }
                     button {
                          background: $blue;

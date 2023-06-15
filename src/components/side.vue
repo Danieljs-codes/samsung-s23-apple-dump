@@ -27,8 +27,11 @@ export default {};
           h1 {
                max-width: 60%;
           }
-          @include media("<=tablet"){
+          @include media("<=tablet") {
                height: 100vh;
+               background-attachment: scroll;
+               background-position: center;
+               background-size: cover;
           }
      }
      &_1 {

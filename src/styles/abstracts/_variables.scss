@@ -22,20 +22,20 @@ $blacktxt: #1d1d1f;
      line-height: 1.7rem;
      letter-spacing: 0.011em;
 }
-%mg_au{
+%mg_au {
      margin: 0 auto;
 }
-%full-width{
-     @include media("<=tablet"){
-         width: 100%;
+%full-width {
+     @include media("<=tablet") {
+          width: 100%;
      }
 }
-%rm-tab{
+%rm-tab {
      @include media("<=tablet") {
           display: none;
      }
 }
-%rm-mobile{
+%rm-mobile {
      @include media("<=phone-tab") {
           display: none;
      }

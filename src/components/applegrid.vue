@@ -87,14 +87,14 @@ onMounted(() => {
                "six seven seven"
                "eight seven seven"
                "nine nine ten";
-               @include media("<=tablet"){
-                     @include flex_col(2rem);
-               }
-               @include media("<=phone-tab"){
-                     width: 85%;
-                     @include flex_col(2rem);
-               }
-               
+          @include media("<=tablet") {
+               @include flex_col(2rem);
+          }
+          @include media("<=phone-tab") {
+               width: 85%;
+               @include flex_col(2rem);
+          }
+
           div {
                border-radius: toRem(6);
                background: $c_gray;
@@ -103,11 +103,11 @@ onMounted(() => {
                border: 1px solid rgba(0, 0, 0, 0.229);
                position: relative;
                opacity: 0;
-               @include media("<=tablet"){
-                     max-height: 30rem;
-                     min-height: 19rem;
+               @include media("<=tablet") {
+                    max-height: 30rem;
+                    min-height: 19rem;
                }
-               
+
                &:nth-child(1) {
                     grid-area: one;
                     @include flex_col(0.7rem);
@@ -116,10 +116,9 @@ onMounted(() => {
                     justify-content: center;
                     img {
                          width: 27rem;
-                         @include media("<=tablet"){
-                     width: 16rem;
-               }
-                         
+                         @include media("<=tablet") {
+                              width: 16rem;
+                         }
                     }
                     p {
                          display: inline;
@@ -142,9 +141,9 @@ onMounted(() => {
                     grid-area: four;
                     background-size: 110%;
                     background-image: url(https://image-us.samsung.com/us/smartphones/galaxy-s23/configurator/D3-Exclusive-Configurator-DT-800x600.jpg);
-                    @include media("<=tablet"){
+                    @include media("<=tablet") {
                          background-size: cover;
-                         background-position-x:-1.2rem;
+                         background-position-x: -1.2rem;
                     }
                }
                &:nth-child(5) {
@@ -167,16 +166,16 @@ onMounted(() => {
                     @include flex(center, flex-end, 0);
                     color: white;
                     background-size: contain;
-                    height:30rem;
+                    height: 30rem;
                     h3 {
                          margin-bottom: 3rem;
                          text-align: center;
                          max-width: 60%;
-                         @include media("<=tablet"){
-                         max-width: 100%;
+                         @include media("<=tablet") {
+                              max-width: 100%;
+                         }
                     }
-                    }
-                    @include media("<=tablet"){
+                    @include media("<=tablet") {
                          background-size: 100%;
                     }
                     background-image: url(https://image-us.samsung.com/us/smartphones/galaxy-s23/hotfix/images/galaxy-s23-highlights-nightography-kv.jpg);

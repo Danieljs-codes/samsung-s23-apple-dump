@@ -16,17 +16,17 @@ span.word_wrap {
           width: 90%;
      }
 }
-.rm-tab{
+.rm-tab {
      @include media("<=tablet") {
           display: none;
      }
 }
-.rm-mobile{
+.rm-mobile {
      @include media("<=phone-tab") {
           display: none;
      }
 }
-.full-width-tab{
+.full-width-tab {
      @include media("<=phone-tab") {
           width: 100%;
           max-width: 100%;
