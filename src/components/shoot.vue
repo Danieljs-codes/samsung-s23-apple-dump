@@ -50,6 +50,7 @@
                                    autoplay
                                    muted
                                    loop
+                                   playsinline="true"
                                    src="https://image-us.samsung.com/us/smartphones/galaxy-s23/videos/galaxy-s23-highlights-nightography.webm"
                               ></video>
                          </div>

@@ -19,6 +19,7 @@
                <div>
                     <video
                          loop
+                         playsinline="true"
                          muted
                          autoplay
                          src="https://image-us.samsung.com/us/smartphones/galaxy-s23/videos/galaxy-s23-highlights-design.webm"
@@ -27,6 +28,7 @@
                <div>
                     <video
                          loop
+                         playsinline="true"
                          muted
                          autoplay
                          src="https://image-us.samsung.com/us/smartphones/galaxy-s23/configurator/DB2C-328-GalleryVideo-S23Ultra-AnimatedVideo_Filled.mp4"

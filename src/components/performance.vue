@@ -10,6 +10,7 @@
                          loop
                          autoplay
                          muted
+                         playsinline="true"
                          src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.webm"
                     ></video>
                     <p data-animation="p">Game at full throttle and smoothly switch between apps with our fastest processor ever.</p>
