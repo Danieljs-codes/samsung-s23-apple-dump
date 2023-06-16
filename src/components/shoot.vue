@@ -50,8 +50,8 @@
                                    autoplay
                                    muted
                                    loop
-                                   playsinline="true"
-                                   src="https://image-us.samsung.com/us/smartphones/galaxy-s23/videos/galaxy-s23-highlights-nightography.webm"
+                                   playsinline
+                                   src="https://image-us.samsung.com/us/smartphones/galaxy-s23/videos/galaxy-s23-highlights-nightography.mp4"
                               ></video>
                          </div>
                          <div class="s_shoot_wrap_img-gall_3-txt">
@@ -376,7 +376,7 @@ onMounted(() => {
                               background: #777777;
                               width: 0.1rem;
                               height: 0;
-                              transition: height 1s ease-out;
+                              transition: height 2s ease-out;
                          }
                          &:nth-child(1) {
                               left: 31%;

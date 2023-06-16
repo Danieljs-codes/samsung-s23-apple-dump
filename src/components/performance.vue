@@ -10,8 +10,8 @@
                          loop
                          autoplay
                          muted
-                         playsinline="true"
-                         src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.webm"
+                         playsinline
+                         src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.mp4"
                     ></video>
                     <p data-animation="p">Game at full throttle and smoothly switch between apps with our fastest processor ever.</p>
                </div>
@@ -41,7 +41,7 @@
                }
           }
           &_vid {
-               @include flex_col(1.5rem);
+               @include flex_col(2rem);
                video {
                     width: 90%;
                     margin: 0 auto;
@@ -50,11 +50,12 @@
                     }
                }
                p {
-                    font-size: 1.3em;
+                    font-size: 1.2em;
                     max-width: 50%;
                     margin: 0 auto;
                     @include media("<=phone-tab") {
                          max-width: 100%;
+                         font-size: 1.1em;
                     }
                }
           }

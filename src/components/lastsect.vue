@@ -79,11 +79,15 @@ export default {};
      &_wrap {
           @include flex_col(2rem);
           &_first {
+               @include flex_col(5rem);
                &_txt {
                     max-width: 70%;
                     @include flex_col(2rem);
                     @include media("<=tablet") {
                          max-width: 100%;
+                         h1 {
+                              font-size: 3.1rem;
+                         }
                     }
                }
                &_img {
@@ -94,9 +98,9 @@ export default {};
                     }
                     @include media("<=tablet") {
                          width: 100%;
+                         @include flex_col(2rem);
                     }
                }
-               @include flex_col(7rem);
           }
           &_second {
                min-height: 100vh;

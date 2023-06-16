@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .gitignore
 /src/assets/hero
+/src/assets/hero_mobile
 /src/assets/samsung
 
 # Editor directories and files

@@ -19,6 +19,7 @@ onMounted(() => {
      const scroll = new LoconativeScroll({
           smooth: true,
           el: document.querySelector("[data-scroll-container]"),
+          lerp: 0.07,
      });
 
      setTimeout(() => {
@@ -30,7 +31,7 @@ onMounted(() => {
 <template>
      <div data-scroll-container class="s_wrap">
           <Header />
-          <!-- <Hero /> -->
+          <Hero />
           <Performance />
           <Shoot />
           <Grid />

@@ -19,18 +19,18 @@
                <div>
                     <video
                          loop
-                         playsinline="true"
-                         muted
+                         playsinline
                          autoplay
-                         src="https://image-us.samsung.com/us/smartphones/galaxy-s23/videos/galaxy-s23-highlights-design.webm"
+                         muted
+                         src="https://image-us.samsung.com/us/smartphones/galaxy-s23/videos/galaxy-s23-highlights-design-s.mp4"
                     ></video>
                </div>
                <div>
                     <video
                          loop
-                         playsinline="true"
-                         muted
+                         playsinline
                          autoplay
+                         muted
                          src="https://image-us.samsung.com/us/smartphones/galaxy-s23/configurator/DB2C-328-GalleryVideo-S23Ultra-AnimatedVideo_Filled.mp4"
                     ></video>
                </div>
@@ -113,9 +113,12 @@ onMounted(() => {
                &:nth-child(1) {
                     grid-area: one;
                     @include flex_col(0.7rem);
-                    height: 30rem;
+
                     align-items: center;
                     justify-content: center;
+                    @include media("<=tablet") {
+                         height: 30rem;
+                    }
                     img {
                          width: 27rem;
                          @include media("<=tablet") {
@@ -168,7 +171,9 @@ onMounted(() => {
                     @include flex(center, flex-end, 0);
                     color: white;
                     background-size: contain;
-                    height: 30rem;
+                    @include media("<=tablet") {
+                         height: 30rem;
+                    }
                     h3 {
                          margin-bottom: 3rem;
                          text-align: center;
@@ -193,7 +198,6 @@ onMounted(() => {
                     background-position: top right;
                     background-size: 150%;
                     @include flex(center, center, 0);
-
                     h3 {
                          color: white;
                          @extend %rm-mobile;

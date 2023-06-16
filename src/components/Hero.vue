@@ -18,9 +18,9 @@ onMounted(() => {
      const html = document.documentElement;
      const canvas = document.getElementById("hero_scene");
      const context = canvas.getContext("2d");
-     const frameCount = 276;
+     const frameCount = 166;
      const currentFrame = (index) => {
-          return `/src/assets/hero/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
+          return `/src/assets/hero_mobile/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
      };
 
      const img = new Image();
@@ -76,7 +76,7 @@ onMounted(() => {
 
      const updateImage = (index) => {
           img.src = currentFrame(index);
-          context.drawImage(img, 0, 0, canvas.width, canvas.height);
+          context.drawImage(img, 0, 0);
      };
 
      preloadImages();
@@ -93,13 +93,12 @@ onMounted(() => {
           height: 1000vh;
           z-index: 1;
           position: relative;
+          background: green;
           canvas {
                top: 0;
                bottom: 0;
                left: 0;
                right: 0;
-               max-width: 100vw;
-               max-height: 100vh;
                position: sticky;
           }
           &_txt {

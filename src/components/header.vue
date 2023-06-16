@@ -25,6 +25,12 @@
                          ></path>
                     </svg>
                </li>
+               <div class="menu_btn">
+                    <div class="buttons">
+                         <span></span>
+                         <span></span>
+                    </div>
+               </div>
           </nav>
      </header>
      <div class="sticky">
@@ -63,6 +69,22 @@ header {
           }
           img {
                width: 7.5rem;
+          }
+          .menu_btn {
+               display: none;
+               @include media("<=tablet") {
+                    display: block;
+               }
+               .buttons {
+                    span {
+                         border-radius: 10rem;
+                         margin: 6px 0;
+                         width: 35px;
+                         display: block;
+                         background: #000000;
+                         height: 2px;
+                    }
+               }
           }
      }
 }
