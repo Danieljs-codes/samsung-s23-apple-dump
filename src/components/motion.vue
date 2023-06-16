@@ -13,10 +13,10 @@ const r = window;
 
 onMounted(() => {
      const canvas = document.getElementById("motion_scene");
-     const frameCount = 278;
+     const frameCount = 270;
      const currentFrame = (index) => {
-          return `/src/assets/samsung/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
-     };
+     return `https://res.cloudinary.com/dszdgdeoh/image/upload/v1686927267/samsung/wwsss-${index}.png`;
+   };
      drawImage(canvas, currentFrame, frameCount);
 });
 </script>

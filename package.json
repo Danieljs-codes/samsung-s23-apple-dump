@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "gsap": "^3.11.4",
     "loconative-scroll": "https://github.com/quentinhocde/loconative-scroll",
     "splitting": "^1.0.6",

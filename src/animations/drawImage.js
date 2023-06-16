@@ -3,17 +3,8 @@ export const drawImage = (canvas, currentFrame, frameCount) => {
           const html = document.documentElement;
           const context = canvas.getContext("2d");
 
-          const updateCanvasSize = () => {
-               canvas.width = window.innerWidth;
-               canvas.height = window.innerHeight;
-          };
-
-          updateCanvasSize();
-
-          window.addEventListener("resize", updateCanvasSize);
-
           const img = new Image();
-          img.src = currentFrame(1);
+          img.src = currentFrame(2);
           img.onload = function () {
                const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
                const imgWidth = img.width * scale;
@@ -25,7 +16,7 @@ export const drawImage = (canvas, currentFrame, frameCount) => {
           };
 
           const preloadImages = () => {
-               for (let i = 0; i < frameCount; i++) {
+               for (let i = 2; i < frameCount; i++) {
                     const img = new Image();
                     img.src = currentFrame(i);
                }

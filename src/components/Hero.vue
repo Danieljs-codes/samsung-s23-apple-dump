@@ -19,20 +19,13 @@ onMounted(() => {
      const canvas = document.getElementById("hero_scene");
      const context = canvas.getContext("2d");
 
-     const updateCanvasSize = () => {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-     };
-     updateCanvasSize();
-     window.addEventListener("resize", updateCanvasSize);
 
      const frameCount = 267;
      const currentFrame = (index) => {
-          return `/src/assets/hero/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
-     };
-
+     return `https://res.cloudinary.com/dszdgdeoh/image/upload/Hero/hero-${index}.png`;
+   };
      const img = new Image();
-     img.src = currentFrame(1);
+     img.src = currentFrame(2);
      img.onload = function () {
           const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
           const imgWidth = img.width * scale;
@@ -44,7 +37,7 @@ onMounted(() => {
      };
 
      const preloadImages = () => {
-          for (let i = 0; i < frameCount; i++) {
+          for (let i = 2; i < frameCount; i++) {
                const img = new Image();
                img.src = currentFrame(i);
           }
@@ -104,9 +97,6 @@ onMounted(() => {
      preloadImages();
 });
 
-onBeforeUnmount(() => {
-     window.removeEventListener("resize", updateCanvasSize);
-});
 </script>
 
 <style lang="scss" scoped>
