@@ -15,9 +15,9 @@ import preloader from "./components/preloader.vue";
 
 const turnOffPreloader = ref(true);
 
-window.addEventListener("DOMContentLoaded", () => {
-  turnOffPreloader.value = !turnOffPreloader.value;
-})
+setTimeout(() => {
+     turnOffPreloader.value = !turnOffPreloader.value;
+}, 10000)
 
 onMounted(() => {
      split();
