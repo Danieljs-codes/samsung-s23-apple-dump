@@ -16,7 +16,7 @@ const props = defineProps({
 onMounted(() => {
   changeTxt();
   function changeTxt(){
-    var text = ["Fetching assets...", "Bundling sfc's...", "Caching data...","Lying to you guys...", "Avocados are mid...", "Please don't go...", "Please stay...", "Are you still here?..." ];
+    var text = ["Fetching assets...", "Bundling sfc's...", "Caching data...","Lying to you guys...", "Avocados are mid...", "Please don't go...", "Please stay...", "Are you still here?...", "Good things take time..." ];
     var counter = 0;
     var elem = document.getElementById("first");
     setInterval(change, 1500);
