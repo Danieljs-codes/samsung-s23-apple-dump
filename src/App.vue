@@ -16,9 +16,6 @@ import preloader from "./components/preloader.vue";
 const turnOffPreloader = ref(true);
 const loadValPreloader = ref(0)
 
-window.addEventListener("load", () => {
-  turnOffPreloader.value = !turnOffPreloader.value;
-})
 onMounted(() => {
      split();
      skew();
@@ -36,6 +33,13 @@ onMounted(() => {
 
 const handleVal = (payload) => {
      loadValPreloader.value = payload;
+
+     if (loadValPreloader.value >= 99) {
+          loadValPreloader.value = 100;
+          setTimeout(() => {
+               turnOffPreloader.value = !turnOffPreloader.value;
+          }, 1000)
+     }
 }
 </script>
 
