@@ -19,6 +19,8 @@ window.addEventListener("load", () => {
   turnOffPreloader.value = !turnOffPreloader.value;
 })
 
+
+
 onMounted(() => {
      split();
      skew();

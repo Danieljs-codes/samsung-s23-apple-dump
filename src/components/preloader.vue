@@ -1,11 +1,29 @@
 <template>
   <div class="d_loader">
     <h2>Loading..</h2>
+    <p id="first">Fetching assets...</p>
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
   </div>
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+
+onMounted(() => {
+  changeTxt();
+  function changeTxt(){
+    var text = ["Fetching assets...", "Bundling sfc's...", "Caching data...","Lying to you guys...", "Avocados are mid...", "Please don't go...", "Please stay...", "Are you still here?..." ];
+    var counter = 0;
+    var elem = document.getElementById("first");
+    setInterval(change, 1500);
+    function change() {
+     elem.innerHTML = text[counter];
+        counter++;
+        if(counter >= text.length) { counter = 0; }
+    }
+}
+
+})
 </script>
 
 <style lang="scss">
