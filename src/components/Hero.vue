@@ -10,38 +10,54 @@
 </template>
 
 <script setup>
-import { onMounted, ref, onBeforeUnmount } from "vue";
+import { onMounted, ref, reactive, computed, defineEmits } from "vue";
 const hero_txt = ref(null);
 const r = window;
 
+const imageLoadingState = reactive({
+  loadedImages: 0,
+  frameCount: 267,
+});
+
+const loadingPercentage = computed(() => {
+  return (imageLoadingState.loadedImages / imageLoadingState.frameCount) * 100;
+});
+
+const emit =defineEmits(['returnLoadVal'])
+
 onMounted(() => {
-     const html = document.documentElement;
-     const canvas = document.getElementById("hero_scene");
+  const html = document.documentElement;
+  const canvas = document.getElementById("hero_scene");
      const context = canvas.getContext("2d");
-
-
      const frameCount = 267;
-     const currentFrame = (index) => {
-     return `https://res.cloudinary.com/dszdgdeoh/image/upload/Hero/hero-${index}.png`;
-   };
-     const img = new Image();
-     img.src = currentFrame(2);
-     img.onload = function () {
-          const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
-          const imgWidth = img.width * scale;
-          const imgHeight = img.height * scale;
-          const x = (canvas.width - imgWidth) / 2;
-          const y = (canvas.height - imgHeight) / 2;
-          context.clearRect(0, 0, canvas.width, canvas.height);
-          context.drawImage(img, x, y, imgWidth, imgHeight);
-     };
 
-     const preloadImages = () => {
-          for (let i = 2; i < frameCount; i++) {
-               const img = new Image();
-               img.src = currentFrame(i);
-          }
-     };
+  const currentFrame = (index) => {
+    return `https://res.cloudinary.com/dszdgdeoh/image/upload/Hero/hero-${index}.png`;
+  };
+ 
+  const img = new Image();
+  img.src = currentFrame(2);
+  img.onload = function () {
+    const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+    const imgWidth = img.width * scale;
+    const imgHeight = img.height * scale;
+    const x = (canvas.width - imgWidth) / 2;
+    const y = (canvas.height - imgHeight) / 2;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(img, x, y, imgWidth, imgHeight);
+  };
+
+  const preloadImages = () => {
+    for (let i = 2; i < imageLoadingState.frameCount; i++) {
+      const img = new Image();
+      img.src = currentFrame(i);
+      img.onload = () => {
+        // Increment the counter each time an image is loaded.
+           imageLoadingState.loadedImages++;
+           emit('returnLoadVal', Math.round(loadingPercentage.value));
+      };
+    }
+  };
 
      const wrap = document.querySelector(".s_hero");
      window.addEventListener("scroll", () => {

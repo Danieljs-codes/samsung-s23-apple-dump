@@ -1,13 +1,17 @@
 <template>
   <div class="d_loader">
-    <h2>Loading..</h2>
+    <h2>Loading {{ props.percent }}%..</h2>
+    <br/>
     <p id="first">Fetching assets...</p>
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, defineProps } from "vue";
+const props = defineProps({
+   percent:"string"
+})
 
 onMounted(() => {
   changeTxt();

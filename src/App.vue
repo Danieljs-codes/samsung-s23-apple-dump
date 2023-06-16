@@ -14,13 +14,11 @@ import LoconativeScroll from "loconative-scroll";
 import preloader from "./components/preloader.vue";
 
 const turnOffPreloader = ref(true);
+const loadValPreloader = ref(0)
 
 window.addEventListener("load", () => {
   turnOffPreloader.value = !turnOffPreloader.value;
 })
-
-
-
 onMounted(() => {
      split();
      skew();
@@ -35,6 +33,10 @@ onMounted(() => {
           scroll.update();
      }, 500);
 });
+
+const handleVal = (payload) => {
+     loadValPreloader.value = payload;
+}
 </script>
 
 <template>
@@ -43,10 +45,10 @@ onMounted(() => {
       enter-active-class="animate__animated animate__fadeOut"
       leave-active-class="animate__animated animate__fadeOut"
     >
-      <preloader v-if="turnOffPreloader"></preloader>
+      <preloader :percent="loadValPreloader" v-if="turnOffPreloader"></preloader>
     </transition>
           <Header />
-          <Hero />
+          <Hero @returnLoadVal="handleVal" />
           <Performance />
           <Shoot />
           <Grid />
