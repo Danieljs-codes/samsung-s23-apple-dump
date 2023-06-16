@@ -15,7 +15,7 @@ import preloader from "./components/preloader.vue";
 
 const turnOffPreloader = ref(true);
 
-window.addEventListener('load', () => {
+window.addEventListener("DOMContentLoaded", () => {
   turnOffPreloader.value = !turnOffPreloader.value;
 })
 
