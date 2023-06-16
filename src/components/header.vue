@@ -40,7 +40,7 @@
                     <ul>
                          <li>Overview</li>
                          <li>Tech Specs</li>
-                         <button>Buy</button>
+                         <button>Buy now</button>
                     </ul>
                </nav>
           </div>
@@ -126,7 +126,7 @@ header {
                          outline: none;
                          border: none;
                          border-radius: 1rem;
-                         font-size: 12px;
+                         font-size: 13px;
                          font-family: inherit;
                          padding: 0.4rem 1rem;
                     }
