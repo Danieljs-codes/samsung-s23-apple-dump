@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, onBeforeUnmount } from "vue";
 const hero_txt = ref(null);
 const r = window;
 
@@ -18,6 +18,14 @@ onMounted(() => {
      const html = document.documentElement;
      const canvas = document.getElementById("hero_scene");
      const context = canvas.getContext("2d");
+
+     const updateCanvasSize = () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+     };
+     updateCanvasSize();
+     window.addEventListener("resize", updateCanvasSize);
+
      const frameCount = 267;
      const currentFrame = (index) => {
           return `/src/assets/hero/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
@@ -94,6 +102,10 @@ onMounted(() => {
      };
 
      preloadImages();
+});
+
+onBeforeUnmount(() => {
+     window.removeEventListener("resize", updateCanvasSize);
 });
 </script>
 
