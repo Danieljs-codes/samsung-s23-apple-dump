@@ -9,10 +9,11 @@
                     <video
                          loop
                          autoplay
-                         muted
+                         muted="true"
                          playsinline
-                         src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.mp4"
-                    ></video>
+                    >
+                <source type="video/mp4" src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.mp4"/>
+               </video>
                     <p data-animation="p">Game at full throttle and smoothly switch between apps with our fastest processor ever.</p>
                </div>
           </div>
