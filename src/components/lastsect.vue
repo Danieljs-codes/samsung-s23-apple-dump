@@ -43,7 +43,8 @@
                     <div class="img_space">
                          <img
                               data-scroll
-                              data-scroll-speed="-1"
+                              data-scroll-speed="-2"
+                              data-scroll-direction="horizontal"
                               src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/images/localization/d3eco.png"
                               alt=""
                          />

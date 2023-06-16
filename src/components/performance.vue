@@ -6,14 +6,12 @@
                     <h1 data-animation="h">Power for those who don't pause</h1>
                </div>
                <div class="s_perf_wrap_vid">
-                    <video
-                         loop
-                         autoplay
-                         muted="true"
-                         playsinline
-                    >
-                <source type="video/mp4" src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.mp4"/>
-               </video>
+                    <video loop autoplay muted="true" playsinline>
+                         <source
+                              type="video/mp4"
+                              src="https://image-us.samsung.com/us/smartphones/galaxy-s23-ultra/videos/galaxy-s23-ultra-highlights-performance-m.mp4"
+                         />
+                    </video>
                     <p data-animation="p">Game at full throttle and smoothly switch between apps with our fastest processor ever.</p>
                </div>
           </div>

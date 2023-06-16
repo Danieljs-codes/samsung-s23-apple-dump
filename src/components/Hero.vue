@@ -18,15 +18,21 @@ onMounted(() => {
      const html = document.documentElement;
      const canvas = document.getElementById("hero_scene");
      const context = canvas.getContext("2d");
-     const frameCount = 166;
+     const frameCount = 267;
      const currentFrame = (index) => {
-          return `/src/assets/hero_mobile/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
+          return `/src/assets/hero/ezgif-frame-${index.toString().padStart(3, "0")}.png`;
      };
 
      const img = new Image();
      img.src = currentFrame(1);
      img.onload = function () {
-          context.drawImage(img, 0, 0, canvas.width, canvas.height);
+          const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+          const imgWidth = img.width * scale;
+          const imgHeight = img.height * scale;
+          const x = (canvas.width - imgWidth) / 2;
+          const y = (canvas.height - imgHeight) / 2;
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          context.drawImage(img, x, y, imgWidth, imgHeight);
      };
 
      const preloadImages = () => {
@@ -76,7 +82,15 @@ onMounted(() => {
 
      const updateImage = (index) => {
           img.src = currentFrame(index);
-          context.drawImage(img, 0, 0);
+          img.onload = () => {
+               const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+               const imgWidth = img.width * scale;
+               const imgHeight = img.height * scale;
+               const x = (canvas.width - imgWidth) / 2;
+               const y = (canvas.height - imgHeight) / 2;
+               context.clearRect(0, 0, canvas.width, canvas.height);
+               context.drawImage(img, x, y, imgWidth, imgHeight);
+          };
      };
 
      preloadImages();
@@ -93,14 +107,6 @@ onMounted(() => {
           height: 1000vh;
           z-index: 1;
           position: relative;
-          background: green;
-          canvas {
-               top: 0;
-               bottom: 0;
-               left: 0;
-               right: 0;
-               position: sticky;
-          }
           &_txt {
                position: sticky;
                z-index: 2;
@@ -109,6 +115,9 @@ onMounted(() => {
                text-align: center;
                h1 {
                     display: none;
+                    @include media("<=phone-tab") {
+                         font-size: 3em;
+                    }
                }
           }
      }
