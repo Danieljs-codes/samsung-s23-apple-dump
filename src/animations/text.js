@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const split = () => {
      const p = document.querySelectorAll("[data-animation='p']");
      const H = document.querySelectorAll("[data-animation='h']");
-     const f = document.querySelectorAll("[data-animation='fadeInOut']");
      p.forEach((item) => {
           const line = Splitting({
                target: item,
@@ -65,28 +64,6 @@ export const split = () => {
                     duration: elem.length > 100 ? 0.5 : 0.6,
                     ease: "easeOut",
                });
-          });
-     });
-
-     f.forEach((item) => {
-          gsap.set(item, {
-               autoAlpha: 0,
-               yPercent: 50,
-               transformStyle: "preserve-3d",
-          });
-          gsap.to(item, {
-               autoAlpha: 1,
-               yPercent: 0,
-               duration: item.length > 100 ? 0.7 : 0.6,
-               ease: "easeOut",
-               scrollTrigger: {
-                    trigger: item,
-                    start: "top center",
-                    end: "+=300",
-                    scrub: true,
-                    ease: "circ.easeOut",
-                    toggleAttribute: "play play reverse reverse",
-               },
           });
      });
 };
