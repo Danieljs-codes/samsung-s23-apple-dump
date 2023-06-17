@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted , ref} from "vue";
+import { onMounted, ref } from "vue";
 import Header from "./components/header.vue";
 import Hero from "./components/Hero.vue";
 import Shoot from "./components/shoot.vue";
@@ -14,7 +14,10 @@ import LoconativeScroll from "loconative-scroll";
 import preloader from "./components/preloader.vue";
 
 const turnOffPreloader = ref(true);
-const loadValPreloader = ref(0)
+
+window.addEventListener("load", () => {
+     turnOffPreloader.value = !turnOffPreloader.value;
+});
 
 onMounted(() => {
      split();
@@ -30,29 +33,15 @@ onMounted(() => {
           scroll.update();
      }, 500);
 });
-
-const handleVal = (payload) => {
-     loadValPreloader.value = payload;
-
-     if (loadValPreloader.value >= 99) {
-          loadValPreloader.value = 100;
-          setTimeout(() => {
-               turnOffPreloader.value = !turnOffPreloader.value;
-          }, 1000)
-     }
-}
 </script>
 
 <template>
      <div data-scroll-container class="s_wrap">
-          <transition
-      enter-active-class="animate__animated animate__fadeOut"
-      leave-active-class="animate__animated animate__fadeOut"
-    >
-      <preloader :percent="loadValPreloader" v-if="turnOffPreloader"></preloader>
-    </transition>
+          <transition enter-active-class="animate__animated animate__fadeOut" leave-active-class="animate__animated animate__fadeOut">
+               <preloader :percent="loadValPreloader" v-if="turnOffPreloader"></preloader>
+          </transition>
           <Header />
-          <Hero @returnLoadVal="handleVal" />
+          <Hero />
           <Performance />
           <Shoot />
           <Grid />

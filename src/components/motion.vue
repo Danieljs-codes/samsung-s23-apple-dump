@@ -8,16 +8,12 @@
 
 <script setup>
 import { onMounted } from "vue";
-import { drawImage } from "../animations/drawImage";
+import { drawVideo } from "../animations/drawVideo";
 const r = window;
 
 onMounted(() => {
      const canvas = document.getElementById("motion_scene");
-     const frameCount = 270;
-     const currentFrame = (index) => {
-     return `https://res.cloudinary.com/dszdgdeoh/image/upload/v1686927267/samsung/wwsss-${index}.png`;
-   };
-     drawImage(canvas, currentFrame, frameCount);
+     drawVideo(canvas, "https://res.cloudinary.com/dszdgdeoh/video/upload/v1687007052/final_base_avw7pm.mp4");
 });
 </script>
 
