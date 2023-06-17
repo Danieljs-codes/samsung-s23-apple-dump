@@ -16,16 +16,9 @@
 </template>
 
 <script setup>
-import { onMounted, ref, reactive } from "vue";
+import { onMounted, ref } from "vue";
 const hero_txt = ref(null);
 const r = window;
-
-// const imageLoadingState = reactive({
-//      loadedImages: 0,
-//      frameCount: 166,
-// });
-
-const emit = defineEmits(["returnLoadVal"]);
 
 onMounted(() => {
      const html = document.documentElement;
@@ -43,17 +36,17 @@ onMounted(() => {
           y = (canvas.height - h) / 2;
      };
 
-
      video.addEventListener(
           "loadeddata",
           function () {
                updateVideoDimensions();
-               // context.clearRect(0, 0, canvas.width, canvas.height);
-                 context.drawImage(video, x, y, w, h);  
+               context.clearRect(0, 0, canvas.width, canvas.height);
+               context.drawImage(video, x, y, w, h);
           },
           false
      );
 
+     
      window.addEventListener("resize", () => {
           updateVideoDimensions();
      });
@@ -81,9 +74,12 @@ onMounted(() => {
           context.drawImage(video, x, y, w, h);
 
           switch (percent) {
+               case 3:
+                    hero_txt.value.style.color = "transparent";
+                    break;
                case 14:
                     hero_txt.value.innerHTML = "Design Speed";
-                    hero_txt.value.style = "color:#39332d; display:block";
+                    hero_txt.value.style = "color:#39332d";
                     break;
                case 38:
                     hero_txt.value.innerHTML = "Fast Processor";
@@ -129,7 +125,6 @@ onMounted(() => {
                width: 100%;
                text-align: center;
                h1 {
-                    display: none;
                     @include media("<=phone-tab") {
                          font-size: 3em;
                     }
