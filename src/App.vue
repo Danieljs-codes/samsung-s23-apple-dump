@@ -26,7 +26,6 @@ onMounted(() => {
      const scroll = new LoconativeScroll({
           smooth: true,
           el: document.querySelector("[data-scroll-container]"),
-          lerp: 0.07,
      });
 
      setTimeout(() => {

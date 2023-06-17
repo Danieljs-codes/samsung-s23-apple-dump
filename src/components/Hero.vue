@@ -1,6 +1,12 @@
 <template>
      <div class="s_hero">
           <div class="s_hero_scene">
+               <video crossorigin="anonymous" loop autoplay muted="true" playsinline>
+                         <source
+                              type="video/mp4"
+                              src="https://res.cloudinary.com/dszdgdeoh/video/upload/v1687005753/sampple.mp4"
+                         />
+                    </video>
                <canvas :width="r.innerWidth" :height="r.innerHeight" id="hero_scene"></canvas>
                <div class="s_hero_scene_txt">
                     <h1 ref="hero_txt"></h1>
@@ -26,13 +32,7 @@ onMounted(() => {
      const canvas = document.getElementById("hero_scene");
      const context = canvas.getContext("2d");
 
-     const video = document.createElement("video");
-     video.src = "https://res.cloudinary.com/dszdgdeoh/video/upload/v1687005753/sampple.mp4";
-     video.muted = true;
-     video.playsInline = true;
-     video.autoplay = false;
-     video.crossOrigin = "anonymous";
-
+     const video = document.querySelector(".s_hero_scene video");
      let scale, x, y, w, h;
 
      const updateVideoDimensions = () => {
@@ -43,11 +43,13 @@ onMounted(() => {
           y = (canvas.height - h) / 2;
      };
 
+
      video.addEventListener(
           "loadeddata",
           function () {
-               video.currentTime = 0;
                updateVideoDimensions();
+               // context.clearRect(0, 0, canvas.width, canvas.height);
+                 context.drawImage(video, x, y, w, h);  
           },
           false
      );
@@ -117,6 +119,9 @@ onMounted(() => {
           height: 1000vh;
           z-index: 1;
           position: relative;
+          video{
+               display: none;
+          }
           &_txt {
                position: sticky;
                z-index: 2;

@@ -1,11 +1,7 @@
-export const drawVideo = (canvas, videoSrc) => {
+export const drawVideo = (canvas, video) => {
      const html = document.documentElement;
      const context = canvas.getContext("2d");
-
-     const video = document.createElement("video");
-     video.src = videoSrc;
-     video.crossOrigin = "anonymous";
-
+     
      let scale, x, y, w, h;
 
      const updateVideoDimensions = () => {
@@ -19,7 +15,6 @@ export const drawVideo = (canvas, videoSrc) => {
      video.addEventListener(
           "loadeddata",
           function () {
-               video.currentTime = 0;
                updateVideoDimensions();
           },
           false
